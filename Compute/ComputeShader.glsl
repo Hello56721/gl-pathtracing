@@ -287,7 +287,7 @@ bool intersectBox(vec3 origin, vec3 dir, const box b, out float tNear, out vec3 
 bool intersectBoxes(vec3 origin, vec3 dir, out hitinfo info) {
     float smallest = MAX_SCENE_BOUNDS;
     bool found = false;
-    for (int i = 0; i < boxes.length; i++) {
+    for (int i = 0; i < 17; i++) {
         vec3 norm;
         float intersection;
         if (intersectBox(origin, dir, boxes[i], intersection, norm) &&
@@ -344,7 +344,7 @@ bool intersectSpheres(vec3 origin, vec3 dir, out hitinfo info) {
     float smallest = MAX_SCENE_BOUNDS;
     bool found = false;
     hitinfo hit;
-    for (int i = 0; i < spheres.length; i++) {
+    for (int i = 0; i < 3; i++) {
 		sphere sph = spheres[i];
 		if (MOTION_BLUR && i == 0) {
 			sph.center.z -= rand(vec2(globalTime)) * 0.4;
