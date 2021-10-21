@@ -2,7 +2,7 @@ find_path(
     GLFW_INCLUDE_DIR
     NAMES "GLFW/glfw3.h"
     PATHS "${CMAKE_SOURCE_DIR}/deps/GLFW/include"
-)
+) 
 
 if (MSVC)
     if (USE_STATIC_LIBS)
